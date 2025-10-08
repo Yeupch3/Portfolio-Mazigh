@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mazigh CHERIFI - Portfolio</title>
+    <title>Mazigh CHERIFI - Portfolio BTS SIO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -124,23 +124,51 @@
             padding: 2rem;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
+        .vignette {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .vignette:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .mind-map {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .mind-map-node {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 0.5rem;
+            border-left: 4px solid var(--secondary);
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Mazigh CHERIFI</a>
+            <a class="navbar-brand" href="#"><i class="fas fa-user me-2"></i>Mazigh CHERIFI</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">Profil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#education">Diplômes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Stages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#interests">Centres d'intérêt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Parcours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bts">Formation BTS SIO</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#metiers">Métiers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#realisations">Réalisations</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -150,10 +178,17 @@
     <!-- Hero Section -->
     <section class="hero text-center">
         <div class="container">
-            <h1 class="display-4 fw-bold">Mazigh CHERIFI</h1>
-            <p class="lead">Étudiant en Bac Pro Systèmes Numériques</p>
-            <p>Passionné par les technologies de l'information et la gestion des réseaux</p>
-            <a href="#contact" class="btn btn-light btn-lg mt-3">Me contacter</a>
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <img src="https://via.placeholder.com/200" alt="Photo Mazigh CHERIFI" class="rounded-circle img-fluid border border-4 border-white shadow">
+                </div>
+                <div class="col-md-9">
+                    <h1 class="display-4 fw-bold">Mazigh CHERIFI</h1>
+                    <p class="lead">Étudiant en BTS SIO option SISR</p>
+                    <p>Passionné par les technologies de l'information et la gestion des réseaux</p>
+                    <a href="#contact" class="btn btn-light btn-lg mt-3">Me contacter</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -166,6 +201,7 @@
                     <div class="card border-0 shadow-sm">
                         <div class="card-body p-4">
                             <p class="card-text">Passionné par les technologies de l'information et la gestion des réseaux, je souhaite intégrer un BTS Services Informatiques aux Organisations option SISR afin de développer mes compétences en administration des systèmes et support technique. Rigoureux et curieux, je suis motivé par la résolution de problèmes et la mise en place de solutions efficaces.</p>
+                            <p class="card-text mt-3">Mon objectif professionnel est de devenir administrateur systèmes et réseaux, capable de concevoir, déployer et maintenir des infrastructures informatiques performantes et sécurisées.</p>
                         </div>
                     </div>
                 </div>
@@ -176,10 +212,15 @@
     <!-- Education Section -->
     <section id="education" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title">Diplômes</h2>
+            <h2 class="section-title">Historique du parcours</h2>
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>BTS SIO option SISR</h4>
+                            <p class="text-muted">2024 - 2026 (en cours)</p>
+                            <p><strong>CNED - Formation à distance</strong></p>
+                        </div>
                         <div class="timeline-item">
                             <h4>Bac Pro Système Numérique option B</h4>
                             <p class="text-muted">Septembre 2022 à Juillet 2024</p>
@@ -201,34 +242,105 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-5">
+    <!-- BTS SIO Section -->
+    <section id="bts" class="py-5">
         <div class="container">
-            <h2 class="section-title">Stages</h2>
+            <h2 class="section-title">Formation actuelle - BTS SIO</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">BTS Services Informatiques aux Organisations</h4>
+                            <p>Le BTS SIO est une formation de niveau BAC+2 qui forme des professionnels capables de répondre aux besoins informatiques des organisations.</p>
+                            
+                            <h5 class="mt-4">Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</h5>
+                            <p>L'option SISR forme des techniciens capables de :</p>
+                            <ul>
+                                <li>Installer, configurer et maintenir les équipements et les services informatiques</li>
+                                <li>Administrer les réseaux et les services associés</li>
+                                <li>Superviser et garantir la sécurité du système d'information</li>
+                                <li>Intervenir sur les infrastructures réseaux et systèmes</li>
+                                <li>Proposer des solutions techniques adaptées aux besoins des utilisateurs</li>
+                            </ul>
+                            
+                            <p>Cette formation me permettra de développer des compétences en administration des systèmes, gestion des réseaux, virtualisation et cybersécurité.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Métiers recherchés Section -->
+    <section id="metiers" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Métiers recherchés</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="project-card">
-                        <div class="p-4">
-                            <h4>Maintenance des objets électroniques</h4>
-                            <p class="text-muted">Mars 2024 à Avril 2024</p>
-                            <p><strong>Ressourcerie Les Bonnes Manières, Blois</strong></p>
-                            <ul>
-                                <li>Assistance à la maintenance et à la réparation des équipements électroniques dans un environnement professionnel</li>
-                                <li>Participation à la mise à jour des logiciels embarqués sur matériels électroniques</li>
-                            </ul>
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Administrateur systèmes et réseaux</h4>
+                            <p class="card-text">Ce métier consiste à gérer l'infrastructure informatique d'une organisation, assurer son bon fonctionnement et sa sécurité.</p>
+                            <p><strong>Justification :</strong> Ce poste correspond à mes compétences techniques et à mon intérêt pour la résolution de problèmes complexes.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="project-card">
-                        <div class="p-4">
-                            <h4>Poste informatique</h4>
-                            <p class="text-muted">Novembre 2023 à Décembre 2023</p>
-                            <p><strong>Friends Digitale, Blois</strong></p>
-                            <ul>
-                                <li>Conception de site internet pour les clients</li>
-                                <li>Automatisation de la messagerie</li>
-                            </ul>
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Technicien support informatique</h4>
+                            <p class="card-text">Ce professionnel assiste les utilisateurs, résout les incidents et participe à la maintenance des équipements informatiques.</p>
+                            <p><strong>Justification :</strong> Mes expériences en maintenance et mon sens du service correspondent à ce profil.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="mb-4">Carte heuristique - Administrateur systèmes et réseaux</h3>
+                    <div class="mind-map">
+                        <div class="row text-center">
+                            <div class="col-md-12 mb-4">
+                                <div class="mind-map-node">
+                                    <h5>Administrateur systèmes et réseaux</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mind-map-node">
+                                    <h6>Compétences techniques</h6>
+                                    <ul class="small">
+                                        <li>Réseaux (TCP/IP, VLAN, VPN)</li>
+                                        <li>Systèmes (Windows Server, Linux)</li>
+                                        <li>Virtualisation (VMware, Hyper-V)</li>
+                                        <li>Sécurité informatique</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mind-map-node">
+                                    <h6>Missions principales</h6>
+                                    <ul class="small">
+                                        <li>Administration infrastructure</li>
+                                        <li>Maintenance et dépannage</li>
+                                        <li>Sécurisation des systèmes</li>
+                                        <li>Support aux utilisateurs</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="mind-map-node">
+                                    <h6>Environnement de travail</h6>
+                                    <ul class="small">
+                                        <li>SSII / ESN</li>
+                                        <li>Grandes entreprises</li>
+                                        <li>Administrations</li>
+                                        <li>Centres de services</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -237,7 +349,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-5 bg-light">
+    <section id="competences" class="py-5">
         <div class="container">
             <h2 class="section-title">Compétences</h2>
             <div class="row">
@@ -272,10 +384,11 @@
                     <h4 class="mb-3">Langues</h4>
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
-                            <h5>Anglais</h5>
+                            <h5>Anglais - Niveau B1 (CECRL)</h5>
                             <div class="progress mb-3">
-                                <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+                                <div class="progress-bar" role="progressbar" style="width: 60%"></div>
                             </div>
+                            <p class="small">Capacité à comprendre les points essentiels d'un discours technique et à communiquer dans un contexte professionnel.</p>
                         </div>
                     </div>
                 </div>
@@ -287,6 +400,8 @@
                                 <li>Efficace dans la mise au travail</li>
                                 <li>Discret</li>
                                 <li>Persévérance</li>
+                                <li>Rigoureux</li>
+                                <li>Curieux</li>
                             </ul>
                         </div>
                     </div>
@@ -295,30 +410,23 @@
         </div>
     </section>
 
-    <!-- Interests Section -->
-    <section id="interests" class="py-5">
+    <!-- Realisations Section -->
+    <section id="realisations" class="py-5 bg-light">
         <div class="container">
-            <h2 class="section-title">Centres d'intérêt</h2>
+            <h2 class="section-title">Réalisations</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="interest-card text-center">
-                        <i class="fas fa-tools fa-3x mb-3 text-primary"></i>
-                        <h4>Bricolage électronique</h4>
-                        <p>Passionné par la création et la réparation d'objets électroniques</p>
+                <div class="col-md-6">
+                    <div class="vignette">
+                        <i class="fas fa-briefcase fa-3x mb-3 text-primary"></i>
+                        <h4>Stage de 1ère année</h4>
+                        <p class="text-muted">À venir - 2025</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="interest-card text-center">
-                        <i class="fas fa-gamepad fa-3x mb-3 text-primary"></i>
-                        <h4>Jeux vidéo</h4>
-                        <p>Intérêt pour les jeux vidéo et leur technologie sous-jacente</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="interest-card text-center">
-                        <i class="fas fa-microchip fa-3x mb-3 text-primary"></i>
-                        <h4>Hardware</h4>
-                        <p>Passion pour les composants informatiques et leur fonctionnement</p>
+                <div class="col-md-6">
+                    <div class="vignette">
+                        <i class="fas fa-laptop-code fa-3x mb-3 text-primary"></i>
+                        <h4>Atelier de professionnalisation 2</h4>
+                        <p class="text-muted">À venir - 2025</p>
                     </div>
                 </div>
             </div>
@@ -326,19 +434,49 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-dark text-white">
+    <section id="contact" class="py-5">
         <div class="container">
-            <h2 class="section-title text-white">Contact</h2>
+            <h2 class="section-title">Contact</h2>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <div class="contact-info text-center">
-                        <h3 class="mb-4">Restons en contact</h3>
-                        <p><i class="fas fa-envelope me-2"></i>mazigh450@icloud.com</p>
-                        <p><i class="fas fa-phone me-2"></i>06 84 57 71 52</p>
-                        <p><i class="fas fa-map-marker-alt me-2"></i>37 Route de Chambord, 41350 Blois</p>
-                        <div class="d-flex justify-content-center gap-3 mt-4">
-                            <a href="#" class="btn btn-primary"><i class="fab fa-linkedin me-2"></i>LinkedIn</a>
-                            <a href="#" class="btn btn-primary"><i class="fab fa-github me-2"></i>GitHub</a>
+                    <div class="contact-info">
+                        <h3 class="mb-4 text-center">Formulaire de contact</h3>
+                        <form>
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nom</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Sujet</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
+                            </div>
+                        </form>
+                        
+                        <hr class="my-4">
+                        
+                        <div class="row text-center">
+                            <div class="col-md-4">
+                                <p><i class="fas fa-envelope me-2"></i>mazigh450@icloud.com</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p><i class="fas fa-phone me-2"></i>06 84 57 71 52</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p><i class="fas fa-map-marker-alt me-2"></i>Blois, France</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -349,7 +487,7 @@
     <!-- Footer -->
     <footer class="py-4 bg-primary text-white text-center">
         <div class="container">
-            <p class="mb-0">© 2024 Mazigh CHERIFI - Tous droits réservés</p>
+            <p class="mb-0">© 2024 Mazigh CHERIFI - Portfolio BTS SIO - Tous droits réservés</p>
         </div>
     </footer>
 
@@ -362,6 +500,13 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
+        });
+        
+        // Vignettes cliquables
+        document.querySelectorAll('.vignette').forEach(vignette => {
+            vignette.addEventListener('click', function() {
+                alert('Cette réalisation sera détaillée ultérieurement');
             });
         });
     </script>
